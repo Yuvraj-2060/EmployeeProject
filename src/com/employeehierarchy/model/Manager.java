@@ -15,10 +15,10 @@ public class Manager extends Employee{
     }
     public void showEmployeeInfo(){
 
-        System.out.println("*** Manager Info ***\n");
+        System.out.println("--------- Manager Info ---------\n");
         System.out.println("ID : " + this.getEmpid());
         System.out.println("Name : " + this.getEname());
         System.out.println("Email : " + this.getEmail());
-        System.out.println(" \nTeam Size: "+teamSize);
+        System.out.println("Team Size: "+teamSize);
     }
 }

@@ -23,8 +23,8 @@ public class BackendEndDeveloper extends Developer{
 
     @Override
     public void showEmployeeInfo() {
-        System.out.println("*** Developer Info  ***");
-        System.out.println(this.getClass().getSimpleName());
+        System.out.println("\n----------------- Developer Info  -----------------\n");
+        System.out.println("---------[ "+this.getClass().getSimpleName()+" ]");
         System.out.println("ID : " + this.getEmpid());
         System.out.println("Name : " + this.getEname());
         System.out.println("Email : " + this.getEmail());

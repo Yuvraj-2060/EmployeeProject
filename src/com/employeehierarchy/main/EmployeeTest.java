@@ -1,3 +1,5 @@
+package com.employeehierarchy.main;
+
 import com.employeehierarchy.model.BackendEndDeveloper;
 //import com.employeehierarchy.model.Developer;
 import com.employeehierarchy.model.Employee;
@@ -5,7 +7,7 @@ import com.employeehierarchy.model.FrontEndDeveloper;
 import com.employeehierarchy.model.Manager;
 import com.employeehierarchy.repository.EmployeeRepository;
 import com.employeehierarchy.repository.EmployeeRepositoryDBImpl;
-//import com.employeehierarchy.repository.EmployeeRepositoryListBasedImpl;
+import com.employeehierarchy.repository.EmployeeRepositoryListBasedImpl;
 
 public class EmployeeTest {
     public static void main(String[] args) {
@@ -14,12 +16,12 @@ public class EmployeeTest {
         Employee employee2 = new BackendEndDeveloper(102,"Ravi","ravi@abc.com","Java","MySql");
 //        Employee employee3 = new FrontEndDeveloper(103,"Sameer","sameer@abc.com","ReactJS","MongoDB");
 
-        employee1.showEmployeeInfo();
-        employee2.showEmployeeInfo();
+//        employee1.showEmployeeInfo();
+//        employee2.showEmployeeInfo();
 //        employee3.showEmployeeInfo();
 
 
-        EmployeeRepository repository = new EmployeeRepositoryDBImpl();
+        EmployeeRepository repository = new EmployeeRepositoryListBasedImpl();
 
         repository.saveEmployee(employee1);
         repository.saveEmployee(employee2);
