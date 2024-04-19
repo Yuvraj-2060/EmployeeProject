@@ -1,6 +1,7 @@
 package com.employeehierarchy.repository;
 
 import com.employeehierarchy.model.Employee;
+import main.employeehierarchy.exception.InvalidEmployeeInfoException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,13 +13,13 @@ public class EmployeeRepositoryListBasedImpl implements EmployeeRepository {
         employees = new ArrayList<>();
     }
 
-    public void saveEmployee(Employee employee) {
+    public void saveEmployee(Employee employee) throws InvalidEmployeeInfoException {
         if(employee.getEmpid() < 0)
-            throw new RuntimeException("Employee ID Can't Be Negative");
+            throw new InvalidEmployeeInfoException("Employee ID Can't Be Negative");
         else if(employee.getEname()==null)
-            throw new RuntimeException("Employee Name Can't Be Empty.");
+            throw new InvalidEmployeeInfoException("Employee Name Can't Be Empty.");
         else if(employee.getEmail()==null)
-            throw new RuntimeException("Employee Email Can't Be Empty.");
+            throw new InvalidEmployeeInfoException("Employee Email Can't Be Empty.");
         else
             employees.add(employee);
     }

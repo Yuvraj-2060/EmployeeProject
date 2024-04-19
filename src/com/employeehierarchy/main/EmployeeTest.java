@@ -8,12 +8,13 @@ import com.employeehierarchy.model.Manager;
 import com.employeehierarchy.repository.EmployeeRepository;
 import com.employeehierarchy.repository.EmployeeRepositoryDBImpl;
 import com.employeehierarchy.repository.EmployeeRepositoryListBasedImpl;
+import main.employeehierarchy.exception.InvalidEmployeeInfoException;
 
 public class EmployeeTest {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InvalidEmployeeInfoException {
 
         Employee employee1 = new Manager(101,"Yuvraj","yuvraj@yahoo.com",7);
-        Employee employee2 = new BackendEndDeveloper(102,"Ravi","ravi@abc.com","Java","MySql");
+        Employee employee2 = new BackendEndDeveloper(-102,"Ravi","ravi@abc.com","Java","MySql");
 //        Employee employee3 = new FrontEndDeveloper(103,"Sameer","sameer@abc.com","ReactJS","MongoDB");
 
 //        employee1.showEmployeeInfo();
@@ -26,7 +27,7 @@ public class EmployeeTest {
             repository.saveEmployee(employee1);
             repository.saveEmployee(employee2);
             System.out.println("Employees saved successfully!");
-        } catch (RuntimeException e) {
+        } catch (InvalidEmployeeInfoException e) {
             System.out.println("Error occurred while saving employee: " + e.getMessage());
         }
 
