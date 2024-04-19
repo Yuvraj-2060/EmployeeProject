@@ -1,7 +1,7 @@
 package com.employeehierarchy.repository;
 
 import com.employeehierarchy.model.Employee;
-import main.employeehierarchy.exception.InvalidEmployeeInfoException;
+import com.employeehierarchy.exception.InvalidEmployeeInfoException;
 
 import java.util.ArrayList;
 import java.util.List;

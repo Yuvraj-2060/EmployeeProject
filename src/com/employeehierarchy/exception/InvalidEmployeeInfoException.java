@@ -1,4 +1,4 @@
-package main.employeehierarchy.exception;
+package com.employeehierarchy.exception;
 
 public class InvalidEmployeeInfoException extends Exception{
     public InvalidEmployeeInfoException(String msg){

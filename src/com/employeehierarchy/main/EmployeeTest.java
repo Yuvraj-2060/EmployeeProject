@@ -3,12 +3,10 @@ package com.employeehierarchy.main;
 import com.employeehierarchy.model.BackendEndDeveloper;
 //import com.employeehierarchy.model.Developer;
 import com.employeehierarchy.model.Employee;
-import com.employeehierarchy.model.FrontEndDeveloper;
 import com.employeehierarchy.model.Manager;
 import com.employeehierarchy.repository.EmployeeRepository;
-import com.employeehierarchy.repository.EmployeeRepositoryDBImpl;
 import com.employeehierarchy.repository.EmployeeRepositoryListBasedImpl;
-import main.employeehierarchy.exception.InvalidEmployeeInfoException;
+import com.employeehierarchy.exception.InvalidEmployeeInfoException;
 
 public class EmployeeTest {
     public static void main(String[] args) throws InvalidEmployeeInfoException {
