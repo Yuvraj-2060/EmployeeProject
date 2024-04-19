@@ -14,7 +14,7 @@ public class EmployeeRepositoryListBasedImpl implements EmployeeRepository {
 
     public void saveEmployee(Employee employee) {
         if(employee.getEmpid() < 0)
-            throw new RuntimeException("Employee Can't Be Negative");
+            throw new RuntimeException("Employee ID Can't Be Negative");
         else if(employee.getEname()==null)
             throw new RuntimeException("Employee Name Can't Be Empty.");
         else if(employee.getEmail()==null)
