@@ -22,6 +22,13 @@ public class EmployeeTest {
 
 
         EmployeeRepository repository = new EmployeeRepositoryListBasedImpl();
+        try {
+            repository.saveEmployee(employee1);
+            repository.saveEmployee(employee2);
+            System.out.println("Employees saved successfully!");
+        } catch (RuntimeException e) {
+            System.out.println("Error occurred while saving employee: " + e.getMessage());
+        }
 
         repository.saveEmployee(employee1);
         repository.saveEmployee(employee2);

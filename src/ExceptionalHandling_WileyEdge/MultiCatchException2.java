@@ -25,6 +25,7 @@ public class MultiCatchException2 {
             System.out.println(e);
         }
 
+
         finally {
             System.out.println("Doesn't Matter Whether Any Exception Occur Or Not...!");
         }
