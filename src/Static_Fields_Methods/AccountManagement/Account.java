@@ -5,7 +5,7 @@ public class Account {
     private long accountNo;
     private String customerName;
     private double balance;
-    static int  noOfAccount=0;
+    static int  noOfAccount;
 
     public Account(long accountNo, String customerName, double balance) {
         noOfAccount++;
@@ -19,11 +19,15 @@ public class Account {
     }
 
     public void withdraw(double amount){
-        if(amount<balance)
-            balance -=amount;
+        if(amount <= 0)
+            throw new IllegalArgumentException("Withdrawal amount must be positive");
+
+        if(amount <= balance)
+            balance -= amount;
         else
-            System.out.println("There is no suffient balance in you account");
+            throw new IllegalArgumentException("Insufficient balance in your account");
     }
+
 
     public void showAccountInfo(){
         System.out.println("------ Acoount Details ------\n");
@@ -32,7 +36,7 @@ public class Account {
         System.out.println("Account Balance : "+ balance);
     }
     public static void noOfAccounts(){
-        System.out.println("The no. of account is:"+ noOfAccount);
+        System.out.println("\nThe no. of account created is: "+ noOfAccount+"\n");
     }
 
 }

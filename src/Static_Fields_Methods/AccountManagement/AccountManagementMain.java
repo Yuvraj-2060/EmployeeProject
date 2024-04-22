@@ -1,5 +1,7 @@
 package Static_Fields_Methods.AccountManagement;
 
+import Static_Fields_Methods.AccountManagement.Exception.InsufficientBalanceException;
+
 public class AccountManagementMain {
     public static void main(String[] args) {
 
@@ -16,7 +18,13 @@ public class AccountManagementMain {
 
         // Do the basic operations(deposit/withdraw)
         a1.deposit(10000);
-        a1.withdraw(5000);
+
+        try {
+            a1.withdraw(90000);
+        }  catch (InsufficientBalanceException e) {
+            System.err.println(e.getMessage());
+        }
+
         a1.showAccountInfo();
     }
 }
