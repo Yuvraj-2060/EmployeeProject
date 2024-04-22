@@ -5,8 +5,10 @@ public class Account {
     private long accountNo;
     private String customerName;
     private double balance;
+    static int  noOfAccount=0;
 
     public Account(long accountNo, String customerName, double balance) {
+        noOfAccount++;
         this.accountNo = accountNo;
         this.customerName = customerName;
         this.balance = balance;
@@ -28,6 +30,9 @@ public class Account {
         System.out.println("Account Number : "+ accountNo);
         System.out.println("Account Holder Name : "+ customerName);
         System.out.println("Account Balance : "+ balance);
+    }
+    public static void noOfAccounts(){
+        System.out.println("The no. of account is:"+ noOfAccount);
     }
 
 }

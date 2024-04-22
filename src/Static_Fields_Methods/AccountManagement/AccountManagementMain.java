@@ -12,6 +12,7 @@ public class AccountManagementMain {
         a1.showAccountInfo();
         a2.showAccountInfo();
         a3.showAccountInfo();
+        Account.noOfAccounts();
 
         // Do the basic operations(deposit/withdraw)
         a1.deposit(10000);
