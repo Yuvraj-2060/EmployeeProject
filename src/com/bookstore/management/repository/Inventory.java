@@ -1,11 +1,10 @@
 package com.bookstore.management.repository;
 
 import com.bookstore.management.model.Book;
-import java.util.ArrayList;
 import java.util.List;
 
 public interface Inventory {
-    List<Book> books = new ArrayList<>();
+    //List<Book> books = new ArrayList<>();
 
     void addBook(Book book);
 

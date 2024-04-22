@@ -5,11 +5,13 @@ import com.bookstore.management.repository.Inventory;
 import com.bookstore.management.repository.InventoryImpl;
 import com.bookstore.management.service.ShoppingCart;
 
+import java.util.List;
+
 public class Bookstore {
     public static void main(String[] args) {
         Book book1 = new Book("50 Shades Of Grey", "Author abc", 200.99);
         Book book2 = new Book("Dumb Island", "Author xyz", 150.99);
-        Book book3 = new Book("DS & Algo", "Author zyk", 800.99);
+        Book book3 = new Book("DS & Algo Edition 69", "Author zyk", 800.99);
 
         Inventory inventory = new InventoryImpl();
         ShoppingCart shoppingCart = new ShoppingCart();
@@ -29,6 +31,16 @@ public class Bookstore {
         inventory.displayInventory();
 
         // Display total price of items in shopping cart
-        System.out.println("\nTotal Price in Shopping Cart: Rs." + shoppingCart.calculateTotalPrice());
+        System.out.println("\nTotal Price in Shopping Cart: Rs." + shoppingCart.calculateTotalPrice()+"\n");
+
+        // Find books by author
+        String author = "Author xyz";
+        List<Book> booksByAuthor = inventory.findBooksByAuthor(author);
+
+        // Display the books found
+        System.out.println("Books by author \"" + author + "\":");
+        for (Book book : booksByAuthor) {
+            System.out.println("Title: " + book.getTitle() + ", Author: " + book.getAuthor() + ", Price: " + book.getPrice());
+        }
     }
 }

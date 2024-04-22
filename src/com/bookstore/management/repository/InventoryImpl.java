@@ -1,11 +1,11 @@
 package com.bookstore.management.repository;
 
 import com.bookstore.management.model.Book;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class InventoryImpl implements Inventory{
+    private List<Book> books = new ArrayList<>();
     @Override
     public void addBook(Book book) {
         books.add(book);
