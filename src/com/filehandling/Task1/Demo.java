@@ -23,8 +23,7 @@ public class Demo {
 
         String filePath = "D:\\Wiley_Edge\\wiley-c392\\src\\com\\filehandling\\Example1\\user_input.txt";
 
-        // Saving User Input Into A File
-        try (FileWriter writer = new FileWriter( filePath))
+        try (FileWriter writer = new FileWriter( filePath))  // Saving User Input Into A File
         {
             writer.write(userInput.toString());
             System.out.println("User Input Is Saved Into File Successfully..!");
@@ -32,8 +31,7 @@ public class Demo {
             System.out.println("Error : occurred while saving to file: " + e.getMessage());
         }
 
-        // Reading and Displaying content from the file
-        try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) { // Reading and Displaying content from the file
             String line;
             System.out.println("Content of the file:");
             while ((line = reader.readLine()) != null) {
