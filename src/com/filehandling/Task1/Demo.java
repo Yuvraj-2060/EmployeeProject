@@ -21,7 +21,7 @@ public class Demo {
             choice = scanner.nextLine().charAt(0);
         } while (choice != 'n');
 
-        String filePath = "D:\\Wiley_Edge\\wiley-c392\\src\\com\\filehandling\\Example1\\user_input.txt";
+        String filePath = "D:\\Wiley_Edge\\wiley-c392\\src\\com\\filehandling\\Task1\\user_input.txt";
 
         try (FileWriter writer = new FileWriter( filePath))  // Saving User Input Into A File
         {
