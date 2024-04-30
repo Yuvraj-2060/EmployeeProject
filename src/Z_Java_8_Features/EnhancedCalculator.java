@@ -29,6 +29,5 @@ public class EnhancedCalculator {
                 throw new IllegalArgumentException("Cannot divide by zero!");
             }
         });
-        System.out.println("Division: " + divideTwo);
     }
 }
