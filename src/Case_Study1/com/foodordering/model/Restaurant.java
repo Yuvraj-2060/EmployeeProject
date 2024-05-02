@@ -98,7 +98,6 @@ public class Restaurant {
                 ", location='" + location + '\'' +
                 ", openingTime=" + openingTime +
                 ", closingTime=" + closingTime +
-                ", menuItems=" + menuItems +
                 ", isActive=" + isActive +
                 '}';
     }

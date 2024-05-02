@@ -36,7 +36,37 @@ public class OnlineFoodOrderingSystem {
 
         long restaurantIdToActivate = 101;
         restaurantRepository.activateRestaurant(restaurantIdToActivate);
+
+        // All active restaurants
+        System.out.println("----- List Of Active Restaurants -----");
         List<Restaurant> activeRestaurant = restaurantRepository.findAllActiveRestaurant();
-        System.out.println(activeRestaurant.toString());
+        activeRestaurant.forEach( restaurant -> System.out.println(restaurant.getName()));
+
+        // All de-active restaurants
+        System.out.println("----- List Of De-Active Restaurants -----");
+        List<Restaurant> deactiveRestaurant = restaurantRepository.findAllDeactivatedRestaurant();
+        deactiveRestaurant.forEach(restaurant -> System.out.println(restaurant.getName()));
+
+        // find restaurant by ID
+        long idToFind = 102;
+        Restaurant foundRestaurant = restaurantRepository.getRestaurantById(idToFind);
+        System.out.println(foundRestaurant.toString()+" Found by its ID");
+
+        // find restaurant by name
+        String restaurantNameToFind = "KGN Express";
+        List<Restaurant> restaurantByName =restaurantRepository.findRestaurantByName(restaurantNameToFind);
+        restaurantByName.forEach(restaurant -> System.out.println("\nRestaurant "+restaurant.getName()+" Found by its name!"));
+
+        // find restaurant by location
+        String restaurantLocationToFind = "Kolkata";
+        List<Restaurant> restaurantByLocation = restaurantRepository.findRestaurantByLocation(restaurantLocationToFind);
+        restaurantByLocation.forEach(restaurant -> System.out.println("\nRestaurant "+restaurant.getName()+" Found by its location"));
+
+        // Finding restaurants by cuisine type
+        CuisineType cuisineTypeToFind = CuisineType.FAST_FOOD_RESTAURANT;
+        List<Restaurant> restaurantByCuisine = restaurantRepository.findRestaurantByType(cuisineTypeToFind);
+        restaurantByCuisine.forEach(restaurant -> System.out.println("\nRestaurant "+restaurant.getName()+" Found by its Cuisine Type"));
+
+
     }
 }
