@@ -69,4 +69,16 @@ public class RestaurantRespositoryImpl implements RestaurantRepository {
         foundRestaurant=restaurantMap.values().stream().filter(restaurant -> restaurant.isActive()==false).toList();
         return foundRestaurant;
     }
+
+    @Override
+    public void activateRestaurant(long restaurantId) {
+        Restaurant restaurant = restaurantMap.get(restaurantId);
+        restaurant.setActive(true);
+    }
+
+    @Override
+    public void deactivateRestaurant(long restaurantId) {
+        Restaurant restaurant = restaurantMap.get(restaurantId);
+        restaurant.setActive(false);
+    }
 }

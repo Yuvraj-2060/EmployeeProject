@@ -24,4 +24,6 @@ public interface RestaurantRepository {
     public List<Restaurant> findAllActiveRestaurant();
 
     public List<Restaurant> findAllDeactivatedRestaurant();
+    void activateRestaurant(long restaurantId);
+    void deactivateRestaurant(long restaurantId);
 }

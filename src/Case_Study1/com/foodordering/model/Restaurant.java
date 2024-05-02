@@ -88,4 +88,18 @@ public class Restaurant {
     public void setActive(boolean active) {
         isActive = active;
     }
+
+    @Override
+    public String toString() {
+        return "Restaurant{" +
+                "restaurantId=" + restaurantId +
+                ", name='" + name + '\'' +
+                ", cuisineType=" + cuisineType +
+                ", location='" + location + '\'' +
+                ", openingTime=" + openingTime +
+                ", closingTime=" + closingTime +
+                ", menuItems=" + menuItems +
+                ", isActive=" + isActive +
+                '}';
+    }
 }

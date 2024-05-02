@@ -11,7 +11,7 @@ public interface RestaurantService {
 
     public void deActivateRestaurant(long restaurantId);
 
-    public void updateMenuItem(MenuItem item);
+    public void updateMenuItem(MenuItem item,Restaurant restaurant);
 
     public Restaurant getRestaurantById(long id);
 
