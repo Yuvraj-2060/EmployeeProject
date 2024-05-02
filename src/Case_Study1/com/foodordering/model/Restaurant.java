@@ -1,20 +1,36 @@
 package Case_Study1.com.foodordering.model;
 
-public class Restaurant {
-    private String name;
-    private String location;
-    private String open_Time;
-    private String close_Time;
-    private String cuisine_Type;
-    private boolean status;
+import java.time.LocalTime;
+import java.util.List;
 
-    public Restaurant(String name, String location, String open_Time, String close_Time, String cuisine_Type, boolean status) {
+public class Restaurant {
+
+    private long restaurantId;
+    private String name;
+    private CuisineType cuisineType;
+    private String location;
+    private LocalTime openingTime;
+    private LocalTime closingTime;
+    private List<MenuItem> menuItems;
+    private boolean isActive;
+
+    public Restaurant(long restaurantId, String name, CuisineType cuisineType, String location, LocalTime openingTime, LocalTime closingTime, List<MenuItem> menuItems, boolean isActive) {
+        this.restaurantId = restaurantId;
         this.name = name;
+        this.cuisineType = cuisineType;
         this.location = location;
-        this.open_Time = open_Time;
-        this.close_Time = close_Time;
-        this.cuisine_Type=cuisine_Type;
-        this.status = status;
+        this.openingTime = openingTime;
+        this.closingTime = closingTime;
+        this.menuItems = menuItems;
+        this.isActive = isActive;
+    }
+
+    public long getRestaurantId() {
+        return restaurantId;
+    }
+
+    public void setRestaurantId(long restaurantId) {
+        this.restaurantId = restaurantId;
     }
 
     public String getName() {
@@ -25,6 +41,14 @@ public class Restaurant {
         this.name = name;
     }
 
+    public CuisineType getCuisineType() {
+        return cuisineType;
+    }
+
+    public void setCuisineType(CuisineType cuisineType) {
+        this.cuisineType = cuisineType;
+    }
+
     public String getLocation() {
         return location;
     }
@@ -33,34 +57,35 @@ public class Restaurant {
         this.location = location;
     }
 
-    public String getOpen_Time() {
-        return open_Time;
+    public LocalTime getOpeningTime() {
+        return openingTime;
     }
 
-    public void setOpen_Time(String open_Time) {
-        this.open_Time = open_Time;
+    public void setOpeningTime(LocalTime openingTime) {
+        this.openingTime = openingTime;
     }
 
-    public String getClose_Time() {
-        return close_Time;
+    public LocalTime getClosingTime() {
+        return closingTime;
     }
 
-    public void setClose_Time(String close_Time) {
-        this.close_Time = close_Time;
-    }
-    public String getCuisine_Type() {
-        return cuisine_Type;
+    public void setClosingTime(LocalTime closingTime) {
+        this.closingTime = closingTime;
     }
 
-    public void setCuisine_Type(String cuisine_Type) {
-        this.close_Time = cuisine_Type;
+    public List<MenuItem> getMenuItems() {
+        return menuItems;
     }
 
-    public boolean isStatus() {
-        return status;
+    public void setMenuItems(List<MenuItem> menuItems) {
+        this.menuItems = menuItems;
     }
 
-    public void setStatus(boolean status) {
-        this.status = status;
+    public boolean isActive() {
+        return isActive;
+    }
+
+    public void setActive(boolean active) {
+        isActive = active;
     }
 }
