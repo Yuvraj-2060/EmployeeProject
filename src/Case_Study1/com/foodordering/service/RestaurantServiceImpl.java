@@ -60,4 +60,14 @@ public class RestaurantServiceImpl implements RestaurantService{
     public List<Restaurant> findAllDeactivatedRestaurant() {
        return restaurantRepository.findAllDeactivatedRestaurant();
     }
+
+    @Override
+    public void addCartItems() {
+
+    }
+
+    @Override
+    public void totalCartValue() {
+
+    }
 }

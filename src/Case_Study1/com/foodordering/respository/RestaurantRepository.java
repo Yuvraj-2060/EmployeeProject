@@ -1,5 +1,6 @@
 package Case_Study1.com.foodordering.respository;
 
+import Case_Study1.com.foodordering.model.CartItem;
 import Case_Study1.com.foodordering.model.CuisineType;
 import Case_Study1.com.foodordering.model.MenuItem;
 import Case_Study1.com.foodordering.model.Restaurant;
@@ -26,4 +27,5 @@ public interface RestaurantRepository {
     public List<Restaurant> findAllDeactivatedRestaurant();
     void activateRestaurant(long restaurantId);
     void deactivateRestaurant(long restaurantId);
+
 }

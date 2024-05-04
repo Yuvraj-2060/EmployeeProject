@@ -17,8 +17,8 @@ public class OnlineFoodOrderingSystem {
         RestaurantRepository restaurantRepository = new RestaurantRespositoryImpl();
         //RestaurantService restaurantService = new RestaurantServiceImpl();
 
-        Restaurant restaurant1 = new Restaurant(101,"KGN Express",FAST_FOOD_RESTAURANT,"Pune", LocalTime.parse("11:00"),LocalTime.parse("09:00"),new ArrayList<>(),true);
-        Restaurant restaurant2 = new Restaurant(102,"Global Punjab",FINE_DINING_RESTAURANT,"Pune", LocalTime.parse("12:00"),LocalTime.parse("07:00"),new ArrayList<>(),false);
+        Restaurant restaurant1 = new FastFoodRestaurant(101,"KGN Express",FAST_FOOD_RESTAURANT,"Pune", LocalTime.parse("11:00"),LocalTime.parse("09:00"),new ArrayList<>(),true);
+        Restaurant restaurant2 = new FineDineRestaurant(102,"Global Punjab",FINE_DINING_RESTAURANT,"Pune", LocalTime.parse("12:00"),LocalTime.parse("07:00"),new ArrayList<>(),false);
         Restaurant restaurant3 = new FastFoodRestaurant(103, "BiggBoss", FAST_FOOD_RESTAURANT,"Kolkata",LocalTime.parse("09:00"), LocalTime.parse("19:00"), new ArrayList<>(), true);
 
         restaurantRepository.addRestaurant(restaurant1);
@@ -67,6 +67,10 @@ public class OnlineFoodOrderingSystem {
         List<Restaurant> restaurantByCuisine = restaurantRepository.findRestaurantByType(cuisineTypeToFind);
         restaurantByCuisine.forEach(restaurant -> System.out.println("\nRestaurant "+restaurant.getName()+" Found by its Cuisine Type"));
 
+        // List Of Menu-Items
+        restaurant1.displayMenuItems();
+        restaurant2.displayMenuItems();
+        restaurant3.displayMenuItems();
 
     }
 }

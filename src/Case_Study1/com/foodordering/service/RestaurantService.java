@@ -24,4 +24,7 @@ public interface RestaurantService {
     public List<Restaurant> findAllActiveRestaurant();
 
     public List<Restaurant> findAllDeactivatedRestaurant();
+
+    public void addCartItems();
+    public void totalCartValue();
 }

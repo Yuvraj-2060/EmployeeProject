@@ -44,4 +44,14 @@ public class MenuItem {
     public void setCalorieCount(double calorieCount) {
         this.calorieCount = calorieCount;
     }
+
+    @Override
+    public String toString() {
+        return "MenuItem{" +
+                "name='" + name + '\'' +
+                ", price=" + price +
+                ", type=" + type +
+                ", calorieCount=" + calorieCount +
+                '}';
+    }
 }

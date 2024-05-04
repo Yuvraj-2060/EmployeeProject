@@ -101,4 +101,8 @@ public class Restaurant {
                 ", isActive=" + isActive +
                 '}';
     }
+    public void displayMenuItems(){
+        System.out.println("----- List Of Menu Items "+ getName()+" -----");
+        menuItems.forEach(menus-> System.out.println(menus));
+    }
 }

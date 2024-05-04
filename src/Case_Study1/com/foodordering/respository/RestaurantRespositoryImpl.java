@@ -1,6 +1,7 @@
 package Case_Study1.com.foodordering.respository;
 
 
+import Case_Study1.com.foodordering.model.CartItem;
 import Case_Study1.com.foodordering.model.CuisineType;
 import Case_Study1.com.foodordering.model.MenuItem;
 import Case_Study1.com.foodordering.model.Restaurant;
@@ -13,6 +14,7 @@ import java.util.Map;
 public class RestaurantRespositoryImpl implements RestaurantRepository {
 
     Map<Long,Restaurant> restaurantMap = new HashMap<>();
+    List<CartItem>  cartItemList = new ArrayList<CartItem>();
     @Override
     public void addRestaurant(Restaurant restaurant) {
         restaurantMap.put(restaurant.getRestaurantId(),restaurant);
@@ -81,4 +83,5 @@ public class RestaurantRespositoryImpl implements RestaurantRepository {
         Restaurant restaurant = restaurantMap.get(restaurantId);
         restaurant.setActive(false);
     }
+
 }
