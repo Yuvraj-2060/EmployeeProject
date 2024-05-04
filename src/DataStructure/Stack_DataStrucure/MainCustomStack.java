@@ -7,7 +7,7 @@ public class MainCustomStack {
 
         CustomeStack myStack = new CustomeStack(2);
         myStack.push("Yuvraj");
-        myStack.push("Singh");
+        myStack.push(12);
 
 
         System.out.println(myStack.pop());
