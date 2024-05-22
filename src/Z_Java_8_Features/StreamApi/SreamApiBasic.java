@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class SreamApiBasic {
     public static void main(String[] args) {
@@ -20,17 +21,24 @@ public class SreamApiBasic {
 
         // Q.1) Create List & Filter all even numbers from list
 
+        //(1).
         List<Integer> list1 = List.of(2,4,50,21,22,67); // Creates Immutable List.
+
         System.out.println(list1.stream().filter(x->x%2==0).collect(Collectors.toList()));
 
+        //(2).
         List<Integer> evenList = list1.stream().filter(e->e%2==0).collect(Collectors.toList());
         System.out.println(evenList);
 
+        //(3).
         List<Integer> list2 = new ArrayList<>(); // Creates Mutable List.
             list2.add(12);
             list2.add(34);
             list2.add(23);
             list2.add(78);
+        // Printing using stream object:
+        Stream<Integer> stream = list2.stream();
+        stream.forEach(e-> System.out.println(e));
 
         List<Integer> list3 = Arrays.asList(23, 567, 12, 677, 24); // Creates Immutable List.
 
