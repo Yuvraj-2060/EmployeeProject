@@ -1,4 +1,4 @@
-package Z_Java_8_Features;
+package Z_Java_8_Features.Lambda_Expression;
 
 public class LambdaWithThread {
     public static void main(String[] args) {

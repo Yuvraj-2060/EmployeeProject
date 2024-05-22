@@ -1,8 +1,6 @@
-package Z_Java_8_Features;
+package Z_Java_8_Features.Lambda_Expression;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 class Product{

@@ -1,4 +1,4 @@
-package Z_Java_8_Features;
+package Z_Java_8_Features.Lambda_Expression;
 interface Operate{
     int addition(int a, int b);
 }
